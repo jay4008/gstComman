@@ -9,6 +9,7 @@ import {
 import { enableScreens } from 'react-native-screens';
 import Home from '../MainScreens/Home';
 import MyBottomTabs from './MyBottomTabs';
+import Scan from '../MainScreens/Scan';
 enableScreens();
 function MyStack(props) {
 
@@ -46,10 +47,26 @@ const HeaderLeftShown = () =>{
 }
 
   return (
-    <Stack.Navigator screenOptions={headerOptionForStackPage}>
+    <Stack.Navigator screenOptions={headerOptionForStackPage} initialRouteName = {'Home'}>
       <Stack.Screen
         name="Home"
         component={MyBottomTabs}
+        options={{
+          headerTintColor: '#224585',
+          headerTitleStyle: {color: '#000', fontSize: 14},
+          headerStyle: {
+            backgroundColor: '#fff',
+          },
+          headerLeft:() => <HeaderLeftShown/>,
+         headerCenter:() => <HeaderShown/>,
+         headerRight :() =>  <HeaderRightShown/>,
+        }}
+      />
+
+
+<Stack.Screen
+        name="Scan"
+        component={Scan}
         options={{
           headerTintColor: '#224585',
           headerTitleStyle: {color: '#000', fontSize: 14},

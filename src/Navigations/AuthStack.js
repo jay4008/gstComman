@@ -10,6 +10,7 @@ import ForgotEmail from '../AuthScreens/ForgotEmail';
 import Verification from '../AuthScreens/Otp';
 import ResetPassword from '../AuthScreens/ResetPassword';
 import Registration from '../AuthScreens/Registration';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 const headerOptionForStackPage = {
     headerStyle: {
       backgroundColor: '#fff',
@@ -31,9 +32,23 @@ function AuthStack() {
       <Stack.Screen name="ResetPassword" component={ResetPassword} />
       <Stack.Screen name="Registration" component={Registration} />
     </Stack.Navigator>
+    
   );
 }
 
+
+const Drawer = createDrawerNavigator();
+
+function MyDrawer() {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen name="AuthStack" component={AuthStack} />
+      <Drawer.Screen name="ForgotEmail" component={ForgotEmail} />
+      <Drawer.Screen name="Verification" component={Verification} />
+      <Drawer.Screen name="Registration" component={Registration} />
+    </Drawer.Navigator>
+  );
+}
 const Home = () =>{
     return(
         <View>
@@ -42,4 +57,4 @@ const Home = () =>{
     )
 }
 
-export default AuthStack;
+export default MyDrawer;

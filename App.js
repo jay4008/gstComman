@@ -14,7 +14,7 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import AuthFrame from './src/AuthScreens/AuthFrame'
 import MyStack from './src/Navigations/MainStack';
-import AuthStack from './src/Navigations/AuthStack';
+import MyDrawer from './src/Navigations/AuthStack';
 // import RootDrawerNav from './src/Navigations/RootDrawerNav';
 const App=() => {
 
@@ -36,9 +36,9 @@ const App=() => {
     <>
     
       <NavigationContainer>
-        <MyStack />
+        {/* <MyStack /> */}
         
-         {/* <AuthStack/> */}
+         <MyDrawer/>
         {/* <RootDrawerNav/> */}
       </NavigationContainer>
      

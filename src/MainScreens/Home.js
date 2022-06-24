@@ -6,7 +6,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import { Ainput } from "../CommonComponents/common/Ainput";
 import { Rtext } from "../CommonComponents/common/Rtext";
 
-const Home = () => {
+const Home = (props) => {
 
     const [bill , setBill] = useState(false);
     const [paid , setPaid] = useState(false);
@@ -14,7 +14,7 @@ const Home = () => {
     const renderItem = ({ item }) => {
 
         return (
-            <View style={{ flexDirection: 'row', paddingVertical: 10, borderColor: '#9370DB', borderWidth: 1, marginTop: 10, marginHorizontal: 10, borderRadius: 8 }}>
+            <TouchableOpacity onPress = {() => props.navigation.navigate('Scan' , {token :"Koushik  paul" , name :"jay shah" , alert :"some data "})} style={{ flexDirection: 'row', paddingVertical: 10, borderColor: '#9370DB', borderWidth: 1, marginTop: 10, marginHorizontal: 10, borderRadius: 8 }}>
                 <View style={{ width: '100%', borderRadius: 5, borderColor: 'black', paddingLeft: 10, flexDirection: 'row' }}>
 
                     <Image source={require('../assets/xyz.png')} style={{ height: 30, width: 30, resizeMode: 'contain', marginRight: 10 }} />
@@ -33,7 +33,7 @@ const Home = () => {
                         </View>
                     </View>
                 </View>
-            </View>
+            </TouchableOpacity>
         )
 
     }

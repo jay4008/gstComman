@@ -17,8 +17,8 @@ const AuthFrame = ({ children, FrameStyle = {} }) => {
                     <Image source={{ uri: "http://www.atlcgroup.com/images/logo.png" }} style={{ height: 100, width: 180, resizeMode: 'contain', alignSelf: 'center', marginBottom: 50 }} />
                     <Animatable.View
                         iterationCount={1}
-                        animation={'fadeInRightBig'}
-                        duration={1000}>
+                        animation={'zoomIn'}
+                        duration={2000}>
                         {
                             children
                         }
