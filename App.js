@@ -36,9 +36,9 @@ const App=() => {
     <>
     
       <NavigationContainer>
-        {/* <MyStack /> */}
+        <MyStack />
         
-         <MyDrawer/>
+         {/* <MyDrawer/> */}
         {/* <RootDrawerNav/> */}
       </NavigationContainer>
      
